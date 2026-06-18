@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-bg: #0B0B0F;
+  --color-brand-primary: #E50914;
+  --color-brand-accent: #FFC857;
+  --color-brand-card: rgba(22, 22, 30, 0.7);
+  
+  --font-sans: "Inter", "Cairo", system-ui, sans-serif;
+}
+
+body {
+  background-color: #0B0B0F;
+  color: #FFFFFF;
+  font-family: "Inter", "Cairo", system-ui, sans-serif;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+/* Enable selection in search & input fields */
+input, textarea, select, [contenteditable="true"] {
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  user-select: text !important;
+}
+
+/* Disable blue browser highlight outlines on buttons and interactive items */
+button, a, select, input, textarea {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+/* Custom interactive active scales */
+button:active, a:active {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Glassmorphism utility classes */
+.glass-panel {
+  background: rgba(18, 18, 26, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Cinematic text drop-shadow to handle light backdrops */
+.cinematic-shadow {
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8), 0 4px 30px rgba(0, 0, 0, 0.9);
+}
+
+/* Hide scrollbars but keep functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Custom beautiful scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0B0B0F;
+}
+::-webkit-scrollbar-thumb {
+  background: #252535;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E50914;
+}
+
+/* Custom skeleton shine */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, #161622 25%, #252535 50%, #161622 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite linear;
+}

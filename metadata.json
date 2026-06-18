@@ -1,0 +1,8 @@
+{
+  "name": "ماذا أشاهد؟",
+  "description": "An AI-powered movie & TV discovery platform powered by TMDB and Gemini, providing personalized recommendations, multi-language support (RTL), analytics, and watchlist features.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
